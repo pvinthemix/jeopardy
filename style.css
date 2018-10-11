@@ -12,6 +12,10 @@ main {
   grid-template-rows: 1fr 6fr 1fr;
 }
 
+.hidden {
+  display: none;
+}
+
 .game-menu {
   display: flex;
   flex-direction: column;
