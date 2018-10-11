@@ -1,20 +1,22 @@
-const chai = require('chai');
-const expect = chai.expect;
-const Game = require('../game.js');
+// const chai = require('chai');
+// const expect = chai.expect;
+// const Game = require('../js/game.js');
 
 
-describe('Game', function() {
-  var game;
+// describe('Game', function() {
+//   var game;
 
-  beforeEach(function() {
-    game = new Game();
-  });
+//   beforeEach(function() {
+//     game = new Game();
+//   });
 
-  it ('should return true', function() {
+//   it ('should return true', function() {
 
-    expect(true).to.equal(true);  
-  });
+//     expect(true).to.equal(true);  
+//   });
 
 
-  it ('should have a name')
-});
+//   it ('should have a name')
+// });
+
+
