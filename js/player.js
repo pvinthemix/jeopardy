@@ -12,11 +12,11 @@ class Player {
     }
   }
 
-  chooseQuestionLevel()
+  // chooseQuestionLevel()
 
-  submitWager(){
+  // submitWager(){
 
-  }
+  // }
 }
 
 if (typeof module !== 'undefined'){
