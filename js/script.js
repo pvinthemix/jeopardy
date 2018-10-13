@@ -15,18 +15,18 @@ startButton.addEventListener('click', startGame)
 
 function startGame(event) {
   event.preventDefault();
-  playerOneName.innerText = playerOneInput.value;
-  playerTwoName.innerText = playerTwoInput.value;
-  playerThreeName.innerText = playerThreeInput.value;
+  const player1name = playerOneInput.value;
+  const player2name = playerTwoInput.value;
+  const player3name = playerThreeInput.value;
   startScreen.classList.add('hidden');
-  populate();
+  const game = new Game([player1name, player2name, player3name])
+  game.beginGame()
+  console.log(game)
+  Array.from(categoryTitles).forEach((title, i) => {
+    title.innerText = game.roundOneCaterogies[i]
+  })
+  
 };
 
-function populate() {
-  console.log(categoryTitles);
-  Array.from(categoryTitles).map((title, index) => {
-    var categoriesArray = Object.keys(data.categories);
-    title.innerHTML = categoriesArray[index]
-  console.log(categoriesArray);
-  })
-}
+
+
