@@ -1,10 +1,13 @@
-const domUpdates {
-  generatePlayers(players) {
-    players.forEach((player) => {
-      if {player === }
-    })
+const domUpdates = {
+  setPlayerNames() {
+    const playerNamesArray = game.players.forEach((player) => {
+  let namesAndScore = document.createElement('h1');
+  namesAndScore.innerHTML = `<div class="name-styling">
+  <h1 class="name">${player}</h1>
+  <h2 class="score">0</h2>
+  </div>`;
+  playerDisplay.append(namesAndScore);
+  });
   }
+}
 
-if (typeof module !== 'undefined') {
-  module.exports = domUpdates;
-};

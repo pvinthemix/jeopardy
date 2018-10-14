@@ -77,8 +77,7 @@ main {
   background-color: #060CE9;
 }
 
-.bottom-navigation-container {
-  background-color: #060CE9;
+.bottom-names-container {
 }
 
 .title-game {
@@ -110,11 +109,18 @@ td {
   border: solid black 1px;
 }
 
-.bottom-navigation-container {
+.bottom-names-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  background-color: #060CE9;
 }
 
+.name-styling {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 
