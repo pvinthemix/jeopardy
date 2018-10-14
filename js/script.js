@@ -15,7 +15,6 @@ function startGame(event) {
   const player3name = playerThreeInput.value;
   startScreen.classList.add('hidden');
   game = new Game([player1name, player2name, player3name])
-  // instantiatePlayers();
   game.beginGame();
   domUpdates.setPlayerNames();
   console.log(game)
