@@ -29,7 +29,7 @@ class Game {
 
     let categoryIdArray;
 
-    if (this.round === 1) {
+    if (this.round === 1) { 
       categoryIdArray = this.roundOneCategories.map((category) => {
         return data.categories[category]
       });
