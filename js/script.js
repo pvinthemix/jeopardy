@@ -17,7 +17,6 @@ function startGame(event) {
   game = new Game([player1name, player2name, player3name])
   game.setCategories();
   game.setQuestions();
-  game.beginGame();
   domUpdates.setPlayerNames();
   console.log(game)
   Array.from(categoryTitles).forEach((title, i) => {

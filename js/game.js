@@ -26,7 +26,7 @@ class Game {
   }
 
   setQuestions() {
-    console.log(this.round);
+
     let categoryIdArray;
 
     if (this.round === 1) {
@@ -46,25 +46,11 @@ class Game {
       // return categoryIdArray;
     }
 
-
     this.roundQuestions100 = this.roundQuestions(100, categoryIdArray);
     this.roundQuestions200 = this.roundQuestions(200, categoryIdArray);
     this.roundQuestions300 = this.roundQuestions(300, categoryIdArray);
     this.roundQuestions400 = this.roundQuestions(400, categoryIdArray);
     this.roundQuestions500 = this.roundQuestions(500, categoryIdArray);
-
-
-
-    // const gameObject = {};
-    // const newCategories = Object.keys(data.categories);
-    // const round1 = newCategories.slice(0,4);
-
-    // round1.forEach((categoryName) => {
-    //   gameObject[categoryName] = data.clues.filter((clue) => {
-    //     return clue.categoryId === data.categories[categoryName]
-    //   });
-    // })
-    // console.log(gameObject)
   }
   roundQuestions(questionValue, categoryIdArray) {
 
