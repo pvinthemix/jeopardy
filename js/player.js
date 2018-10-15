@@ -1,7 +1,9 @@
 class Player {
-  constructor(name) {
+  constructor(name, id) {
     this.name = name;
     this.score = 0;
+    this.turn = false;
+    this.id = id;
   }
 
   submitAnswer(playerGuess, question){
@@ -9,6 +11,7 @@ class Player {
       this.score += question.pointValue; 
     } else {
       this.score -= question.pointValue;
+      this.turn = false;
     }
   }
 

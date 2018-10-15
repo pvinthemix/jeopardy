@@ -15,11 +15,12 @@ function startGame(event) {
   const player3name = playerThreeInput.value;
   startScreen.classList.add('hidden');
   game = new Game([player1name, player2name, player3name])
-  // instantiatePlayers();
-  game.beginGame();
+  // game.instantiatePlayers();
+  game.setCategories();
+  game.setQuestions();
   domUpdates.setPlayerNames();
   console.log(game)
   Array.from(categoryTitles).forEach((title, i) => {
-    title.innerText = game.roundOneCategories[i]
+    title.innerText = game.roundOneCategories[i];
   })
 };

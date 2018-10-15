@@ -24,6 +24,7 @@ describe('Player', function() {
   it('should decrease player score if incorrect', function() {
     player1.submitAnswer('basketball', question);
     expect(player1.score).to.equal(-100)
+    expect(player1.turn).to.equal(false)
   })
 
 
