@@ -26,7 +26,6 @@ class Game {
   }
 
   setQuestions() {
-
     let categoryIdArray;
 
     if (this.round === 1) { 
@@ -60,12 +59,8 @@ class Game {
       }).filter((question) => {
         return question.pointValue === questionValue || question.value === questionValue;
       })
-      if (questions.length === 1) {
-        return questions[0];
-      } else {
        const index = Math.floor(Math.random() * ( (questions.length -1) - 0)) + 0;
         return questions[index];
-      }
     })
   }
 
