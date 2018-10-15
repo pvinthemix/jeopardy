@@ -8,9 +8,7 @@ class Game {
   }
 
   instantiatePlayers() {
-    let player1 = new Player(player1name);
-    let player2 = new Player(player2name);
-    let player3 = new Player(player3name);
+
   }
 
   setCategories() {
