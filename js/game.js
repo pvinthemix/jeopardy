@@ -50,6 +50,9 @@ class Game {
     this.roundQuestions300 = this.roundQuestions(300, categoryIdArray);
     this.roundQuestions400 = this.roundQuestions(400, categoryIdArray);
     this.roundQuestions500 = this.roundQuestions(500, categoryIdArray);
+
+    // this.questions = [...this.roundQuestions100, ...this.roundQuestions200, ...this.roundQuestions300, ...this.roundQuestions400, ...this.roundQuestions500];
+
   }
   roundQuestions(questionValue, categoryIdArray) {
 

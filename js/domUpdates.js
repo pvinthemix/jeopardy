@@ -1,38 +1,39 @@
 const domUpdates = {
   setPlayerNames() {
     const playerNamesArray = game.players.forEach((player) => {
-      let namesAndScore = document.createElement('h1');
-      namesAndScore.innerHTML = `<div class="name-styling">
-      <h1 class="name">${player}</h1>
-      <h2 class="score ${player}">0</h2>
-      </div>`;
+      let namesAndScore = document.createElement('div');
+      namesAndScore.innerHTML = `<h2>Player Name: ${player.name}</h2> 
+            <h2>Score: 0</h2>`;
       playerDisplay.append(namesAndScore);
     });
   },
 
   addGameBoardListener() {
     function playerQuestionSelection(event) {
+      let question;
     let categoryIndex = event.target.classList[1];
       switch (event.target.classList[0]) {
         case 'question100':
-          console.log(game.roundQuestions100[categoryIndex]);
+          question = game.roundQuestions100[categoryIndex];
           break;
         case 'question200':
-          console.log(game.roundQuestions200[categoryIndex]);
+          question = game.roundQuestions200[categoryIndex];
           break;
         case 'question300':
-          console.log(game.roundQuestions300[categoryIndex]);
+          question = game.roundQuestions300[categoryIndex];
           break;
         case 'question400':
-          console.log(game.roundQuestions400[categoryIndex]);
+          question = game.roundQuestions400[categoryIndex];
           break;
         case 'question500':
-          console.log(game.roundQuestions500[categoryIndex]);
+          question = game.roundQuestions500[categoryIndex];
           break;
-
       }
-    }
 
+      questionDisplay.innerText = question.question;
+
+
+    }
 
     let gameTable = document.querySelector('.game-question-table');
     gameTable.addEventListener('click', playerQuestionSelection);
