@@ -15,7 +15,10 @@ describe('Game', function() {
     expect(true).to.equal(true);  
   });
 
-  it ('should have a name')
+  it ('should set an array of categories', function() {
+    game.setCategories();
+    expect(game.roundOneCategories).to.equal([])
+  })
   
 });
 

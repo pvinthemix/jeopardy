@@ -44,7 +44,7 @@ class Game {
       });
       // return categoryIdArray;
     }
-
+    
     this.roundQuestions100 = this.roundQuestions(100, categoryIdArray);
     this.roundQuestions200 = this.roundQuestions(200, categoryIdArray);
     this.roundQuestions300 = this.roundQuestions(300, categoryIdArray);
@@ -64,11 +64,19 @@ class Game {
     })
   }
 
+  // questionInstantiation() {
+  //   let random = Math.floor((Math.random() * 4) -1);
+  //   let daily = new DailyDouble(roundQuestions100[random]);
+  //   roundQuestions100 = .map(question => {
+  //     return new Question(question);
+  //   });
+  //   game.questions.splice(random, 1, daily);
+  // }
 
   resetGame() {
 
 
-}
+  }
   updateRound() {
 
   }
