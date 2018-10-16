@@ -3,15 +3,15 @@ class Game {
     this.players = players;
     this.roundOneCategories = [];
     this.roundTwoCategories = [];
-    this.roundThreeCategory = null;
+    this.roundThreeCategory = [];
     this.round = 1;
   }
 
   instantiatePlayers() {
-  
+
   }
 
-  beginGame() {
+  setCategories() {
     const categories = Object.keys(data.categories);
 
     while (this.roundOneCategories.length < 4) {
@@ -50,13 +50,36 @@ class Game {
     this.roundQuestions300 = this.roundQuestions(300, categoryIdArray);
     this.roundQuestions400 = this.roundQuestions(400, categoryIdArray);
     this.roundQuestions500 = this.roundQuestions(500, categoryIdArray);
+
     // this.questions = [...this.roundQuestions100, ...this.roundQuestions200, ...this.roundQuestions300, ...this.roundQuestions400, ...this.roundQuestions500];
+
   }
+  roundQuestions(questionValue, categoryIdArray) {
+
+    return categoryIdArray.map((id) => {    
+      const questions = data.clues.filter((clue) => {
+        return clue.categoryId === id;
+      }).filter((question) => {
+        return question.pointValue === questionValue || question.value === questionValue;
+      })
+       const index = Math.floor(Math.random() * ( (questions.length -1) - 0)) + 0;
+        return questions[index];
+    })
+  }
+
+  // questionInstantiation() {
+  //   let random = Math.floor((Math.random() * 4) -1);
+  //   let daily = new DailyDouble(roundQuestions100[random]);
+  //   roundQuestions100 = .map(question => {
+  //     return new Question(question);
+  //   });
+  //   game.questions.splice(random, 1, daily);
+  // }
 
   resetGame() {
 
 
-}
+  }
   updateRound() {
 
   }

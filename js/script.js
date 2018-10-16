@@ -22,6 +22,6 @@ function startGame(event) {
   domUpdates.setPlayerNames();
   console.log(game)
   Array.from(categoryTitles).forEach((title, i) => {
-    title.innerText = game.roundOneCategories[i]
+    title.innerText = game.roundOneCategories[i];
   })
 };

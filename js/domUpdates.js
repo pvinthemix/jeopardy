@@ -35,11 +35,11 @@ const domUpdates = {
 
     }
 
-
-
-
     let gameTable = document.querySelector('.game-question-table');
     gameTable.addEventListener('click', playerQuestionSelection);
   }
+
 }
+
+// can we add different classes using interpolation to update the score of each player after their turn without changing every player?//
 
