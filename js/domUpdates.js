@@ -1,7 +1,6 @@
 class DomUpdates {
   constructor() {
     this.answer = '';
-    // this.addGameBoardListener = this.addGameBoardListener.bind(this);
   }
 
   setPlayerNames() {
@@ -9,10 +8,9 @@ class DomUpdates {
       let namesAndScore = document.createElement('div');
       namesAndScore.innerHTML = `<div class="name-styling">
         <h2>Player Name: ${player.name}</h2> 
-        <h2>Score: <span class=${player.name}>0</span></h2></div>`;
+        <h2>Score: <span class=${player.id}>0</span></h2></div>`;
       const playerDisplay = document.querySelector('.bottom-names-container');
       playerDisplay.append(namesAndScore);
-
     });
   }
 
@@ -47,6 +45,10 @@ class DomUpdates {
     }
     let gameTable = document.querySelector('.game-question-table');
     gameTable.addEventListener('click', playerQuestionSelection);
+  }
+
+  changeScore() {
+
   }
 }
 

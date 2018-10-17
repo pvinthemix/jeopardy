@@ -6,6 +6,7 @@ var startScreen = document.querySelector('.start-screen');
 var categoryTitles = document.querySelectorAll('.category');
 var playerAnswer = document.querySelector('.question-answer-input');
 var submitAnswer = document.querySelector('.submit-answer-button');
+var playerScore = document.querySelector('.player');
 var game;
 var domUpdates;
 var player1;

@@ -2,7 +2,6 @@ class Player {
   constructor(name, id) {
     this.name = name;
     this.score = 0;
-    // this.turn = false;
     this.id = id;
   }
 
@@ -10,9 +9,12 @@ class Player {
     if (playerGuess === question.answer) {
       this.score += question.pointValue; 
       playerAnswer.value = '';
+      document.querySelector('.player').innerText = this.score;
+      domUpdates.changeScore();
     } else {
       this.score -= question.pointValue;
-      // this.turn = false;
+      document.querySelector('.player').innerText = this.score;
+      domUpdates.changeScore();
       playerAnswer.value = '';
     }
   }
