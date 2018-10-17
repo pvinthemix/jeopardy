@@ -2,25 +2,22 @@ class Player {
   constructor(name, id) {
     this.name = name;
     this.score = 0;
-    this.turn = false;
+    // this.turn = false;
     this.id = id;
   }
 
-  submitAnswer(playerGuess, question){
+  submitAnswer(playerGuess, question) {
     if (playerGuess === question.answer) {
-      console.log('winner winner')
       this.score += question.pointValue; 
+      playerAnswer.value = '';
     } else {
-      console.log('nah nah')
       this.score -= question.pointValue;
-      this.turn = false;
+      // this.turn = false;
+      playerAnswer.value = '';
     }
   }
-
-
 }
 
-if (typeof module !== 'undefined'){
+if (typeof module !== 'undefined') {
   module.exports = Player;
 }
-

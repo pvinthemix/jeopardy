@@ -1,3 +1,10 @@
 class DailyDouble extends Question {
-  constructor()
+  constructor() {
+    super(); 
+
+  }
+}
+
+if (typeof module !== 'undefined') {
+  module.exports = DailyDouble;
 }
