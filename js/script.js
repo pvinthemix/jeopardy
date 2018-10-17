@@ -14,9 +14,9 @@ startButton.addEventListener('click', startGame)
 submitAnswer.addEventListener('click', submitAnswerHandler)
 
 function startGame() {
-  player1 = new Player(playerOneInput.value);
-  const player2 = new Player(playerTwoInput.value);
-  const player3 = new Player(playerThreeInput.value);
+  player1 = new Player(playerOneInput.value, Date.now());
+  const player2 = new Player(playerTwoInput.value, Date.now());
+  const player3 = new Player(playerThreeInput.value, Date.now());
   startScreen.classList.add('hidden');
   game = new Game([player1, player2, player3])
   domUpdates = new DomUpdates();
