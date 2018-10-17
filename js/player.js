@@ -8,8 +8,10 @@ class Player {
 
   submitAnswer(playerGuess, question){
     if (playerGuess === question.answer) {
+      console.log('winner winner')
       this.score += question.pointValue; 
     } else {
+      console.log('nah nah')
       this.score -= question.pointValue;
       this.turn = false;
     }

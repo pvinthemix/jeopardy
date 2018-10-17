@@ -1,12 +1,19 @@
-const domUpdates = {
+class DomUpdates {
+  constructor() {
+    this.answer = '';
+    // this.addGameBoardListener = this.addGameBoardListener.bind(this);
+  }
+
   setPlayerNames() {
     const playerNamesArray = game.players.forEach((player) => {
       let namesAndScore = document.createElement('div');
-      namesAndScore.innerHTML = `<h2>Player Name: ${player.name}</h2> 
-            <h2>Score: 0</h2>`;
+      namesAndScore.innerHTML = `
+        <h2>Player Name: ${player.name}</h2> 
+        <h2>Score: <span class=${player.name}>0</span></h2>`;
       playerDisplay.append(namesAndScore);
+
     });
-  },
+  }
 
   addGameBoardListener() {
     function playerQuestionSelection(event) {
@@ -32,13 +39,23 @@ const domUpdates = {
 
       questionDisplay.innerText = question.question;
 
+      // game state updates
+      game.currentQuestion = question.question;
+      game.currentAnswer = question.answer;
+      game.currentQuestionPointValue = question.pointValue;
+      
+      console.log(question.answer)
+      console.log(this)
 
     }
 
     let gameTable = document.querySelector('.game-question-table');
     gameTable.addEventListener('click', playerQuestionSelection);
   }
-
+  // submitAnswerHandler(e) {
+  //   e.preventDefault();
+  //   if ()
+  // }
 }
 
 // can we add different classes using interpolation to update the score of each player after their turn without changing every player?//
