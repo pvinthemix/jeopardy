@@ -8,10 +8,9 @@ class DomUpdates {
       let namesAndScore = document.createElement('div');
       namesAndScore.innerHTML = `<div class="name-styling">
         <h2>Player Name: ${player.name}</h2> 
-        <h2>Score: <span class="player">0</span></h2></div>`;
+        <h2>Score: <span class=${player.id}>0</span></h2></div>`;
       const playerDisplay = document.querySelector('.bottom-names-container');
       playerDisplay.append(namesAndScore);
-
     });
   }
 
