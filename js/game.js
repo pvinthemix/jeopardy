@@ -1,6 +1,9 @@
 class Game {
   constructor(players) {
     this.players = players;
+    this.currentQuestion = null;
+    this.currentAnswer = null;
+    this.currentQuestionPointValue = null;
     this.roundOneCategories = [];
     this.roundTwoCategories = [];
     this.roundThreeCategory = [];
