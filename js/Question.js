@@ -1,5 +1,5 @@
 class Question {
-  constructor(clueObj){
+  constructor (clueObj) {
     this.question = clueObj.question;
     this.pointValue = clueObj.pointValue;
     this.answer = clueObj.answer;
@@ -7,10 +7,6 @@ class Question {
   }
 }
 
-
-
-
-
-if (typeof module !== 'undefined'){
+if (typeof module !== 'undefined') {
   module.exports = Question;
 }
