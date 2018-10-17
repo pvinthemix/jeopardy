@@ -49,6 +49,7 @@ main {
   padding: 10px;
   text-align: center;
   font-size: 25px;
+  margin-bottom: 20px;
 }
 
 .game-menu {
@@ -69,6 +70,9 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  background-image: url(images/jeopardytitle.png);
+  background-size: cover;
+  background-position: center;
 }
 
 .gameboard-container {
@@ -86,15 +90,10 @@ main {
 
 .question-answer-input,
 .submit-answer-button {
-  margin: 20px;
   width: 150px;
   height: 25px;
-}
-
-.title-game {
-  background-color: #060CE9;
-  font-size: 75px;
-  height: 75px;
+  margin: auto;
+  display: flex;
 }
 
 .round-display {
@@ -105,6 +104,10 @@ main {
 
 .round-display p {
   font-size: 35px;
+  border: solid black 2px;
+  background-color: white;
+  width: 150px;
+  text-align: center;
 }
 
 .game-question-table {
