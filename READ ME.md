@@ -10,9 +10,16 @@
 ## WireFrame  
 ![Screenshot](https://i.imgur.com/6c92o52.png)
 
-## Live Version
+## Our Current Version
 ![Screenshot](https://i.imgur.com/Mo2eQwI.png)
 
 #### Our DTR can be found [here](https://gist.github.com/pvinthemix/080dc09c92e44643bc70db60ffada0c4)
 
 #### Original Project Specs can be found [here](http://frontend.turing.io/projects/jeopardy.html) 
+
+## Future Project Directions
+- As we move forward with this project, we hope to implement the following functionality:
+- 2nd and 3rd rounds
+- Daily Double class that extends the Questions class
+- Stopping and resetting the game
+- Clean-up the styling aspects
