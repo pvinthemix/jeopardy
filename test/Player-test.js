@@ -25,6 +25,5 @@ beforeEach(function() {
       player1.submitAnswer('basketball', question);
       expect(player1.score).to.equal(-100)
       expect(playerAnswer.value).to.equal('')
-      // expect(player1.turn).to.equal(false)
   })
 })

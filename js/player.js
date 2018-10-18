@@ -2,21 +2,25 @@ class Player {
   constructor(name, id) {
     this.name = name;
     this.score = 0;
-    this.id = id;
+    this.turn = false;
   }
 
-  submitAnswer(playerGuess, question) {
+  submitAnswer(playerGuess, question, i) {
     if (playerGuess === question.answer) {
       this.score += question.pointValue; 
+      document.getElementById(i).innerText = this.score;
       playerAnswer.value = '';
-      document.querySelector('.player').innerText = this.score;
-      domUpdates.changeScore();
+      game.changePlayer();
     } else {
       this.score -= question.pointValue;
-      document.querySelector('.player').innerText = this.score;
-      domUpdates.changeScore();
+      document.getElementById(i).innerText = this.score;
       playerAnswer.value = '';
+      game.changePlayer();
     }
+  }
+
+  toggleTurn() {
+    this.turn = !this.turn;
   }
 }
 

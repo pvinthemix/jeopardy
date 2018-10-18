@@ -10,19 +10,15 @@ class Game {
     this.round = 1;
   }
 
-  instantiatePlayers() {
-
-  }
-
   setCategories() {
     const categories = Object.keys(data.categories);
 
     while (this.roundOneCategories.length < 4) {
-      const index = Math.floor(Math.random() * ((categories.length - 1) - 0)) + 0;
+      const index = Math.floor(Math.random() * ((categories.length - 1) - 0));
       this.roundOneCategories.push(categories.splice(index, 1)[0]);
     }
     while (this.roundTwoCategories.length < 4) {
-      const index = Math.floor(Math.random() * ((categories.length - 1) - 0)) + 0;
+      const index = Math.floor(Math.random() * ((categories.length - 1) - 0));
       this.roundTwoCategories.push(categories.splice(index, 1)[0]);
     }
     this.roundThreeCategory.push(categories[0]);
@@ -61,27 +57,28 @@ class Game {
       const questions = data.clues.filter((clue) => {
         return clue.categoryId === id;
       }).filter((question) => {
-        return question.pointValue === questionValue || question.value === questionValue;
+        return question.pointValue === questionValue 
+        || question.value === questionValue;
       })
-       const index = Math.floor(Math.random() * ( (questions.length -1) - 0)) + 0;
+       const index = Math.floor(Math.random() * ( (questions.length -1) - 0));
         return questions[index];
     })
   }
 
-  resetGame() {
-
-
+  changePlayer() {
+     let currentPlayer = this.players.find((player) => {
+        return player.turn === true;
+    })
+     currentPlayer.toggleTurn();
+     let playerIndex = this.players.indexOf(currentPlayer);
+     if (playerIndex === 2) {
+       playerIndex = -1;
+    }
+     let nextPlayer = this.players[playerIndex + 1];
+     nextPlayer.toggleTurn();
   }
-  updateRound() {
-
-  }
-
-  declareWinner() {
-
-  }
-
 }
 
 if (typeof module !== 'undefined') {
   module.exports = Game;
-};
+}
