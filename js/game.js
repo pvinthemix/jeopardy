@@ -8,11 +8,6 @@ class Game {
     this.roundTwoCategories = [];
     this.roundThreeCategory = [];
     this.round = 1;
-    // this.dataForAll = dataForAll;
-
-    // if (typeof require !== 'undefined') {
-    //   this.data = require('../js/data.js')
-    // }
   }
 
   setCategories() {
@@ -34,19 +29,16 @@ class Game {
 
     if (this.round === 1) { 
       categoryIdArray = this.roundOneCategories.map((category) => {
-        return data.categories[category]
+        return data.categories[category];
       });
-      // return categoryIdArray;
     } else if (this.round === 2) {
       categoryIdArray = this.roundTwoCategories.map((category) => {
-        return data.categories[category]
+        return data.categories[category];
       });
-      // return categoryIdArray;
     } else {
       categoryIdArray = this.roundThreeCategory.map((category) => {
-        return data.categories[category]
+        return data.categories[category];
       });
-      // return categoryIdArray;
     }
     
     this.roundQuestions100 = this.roundQuestions(100, categoryIdArray);
@@ -57,13 +49,11 @@ class Game {
   }
   
   roundQuestions(questionValue, categoryIdArray) {
-
     return categoryIdArray.map((id) => {    
       const questions = data.clues.filter((clue) => {
         return clue.categoryId === id;
       }).filter((question) => {
-        return question.pointValue === questionValue 
-        || question.value === questionValue;
+        return question.pointValue === questionValue || question.value === questionValue;
       })
       const index = Math.floor(Math.random() * ( (questions.length - 1) - 0));
       return questions[index];

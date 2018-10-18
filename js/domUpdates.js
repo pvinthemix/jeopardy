@@ -17,38 +17,32 @@ class DomUpdates {
   addGameBoardListener() {
     var questionDisplay = document.querySelector('.question-display');
     function playerQuestionSelection(event) {
-      let question;
+      let questionBeingAsked;
       let categoryIndex = event.target.classList[1];
       switch (event.target.classList[0]) {
       case 'question100':
-        question = game.roundQuestions100[categoryIndex];
+        questionBeingAsked = game.roundQuestions100[categoryIndex];
         break;
       case 'question200':
-        question = game.roundQuestions200[categoryIndex];
+        questionBeingAsked = game.roundQuestions200[categoryIndex];
         break;
       case 'question300':
-        question = game.roundQuestions300[categoryIndex];
+        questionBeingAsked = game.roundQuestions300[categoryIndex];
         break;
       case 'question400':
-        question = game.roundQuestions400[categoryIndex];
+        questionBeingAsked = game.roundQuestions400[categoryIndex];
         break;
       case 'question500':
-        question = game.roundQuestions500[categoryIndex];
+        questionBeingAsked = game.roundQuestions500[categoryIndex];
         break;
       }
-
-      questionDisplay.innerText = question.question;
-      // game state updates
-      game.currentQuestion = question.question;
-      game.currentAnswer = question.answer;
-      game.currentQuestionPointValue = question.pointValue;
+      questionDisplay.innerText = questionBeingAsked.question;
+      game.currentQuestion = questionBeingAsked.question;
+      game.currentAnswer = questionBeingAsked.answer;
+      game.currentQuestionPointValue = questionBeingAsked.pointValue;
     }
     let gameTable = document.querySelector('.game-question-table');
     gameTable.addEventListener('click', playerQuestionSelection);
-  }
-
-  changeScore() {
-    
   }
 }
 
