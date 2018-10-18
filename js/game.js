@@ -65,22 +65,22 @@ class Game {
         return question.pointValue === questionValue 
         || question.value === questionValue;
       })
-       const index = Math.floor(Math.random() * ( (questions.length -1) - 0));
-        return questions[index];
+      const index = Math.floor(Math.random() * ( (questions.length - 1) - 0));
+      return questions[index];
     })
   }
 
   changePlayer() {
-     let currentPlayer = this.players.find((player) => {
-        return player.turn === true;
+    let currentPlayer = this.players.find((player) => {
+      return player.turn === true;
     })
-     currentPlayer.toggleTurn();
-     let playerIndex = this.players.indexOf(currentPlayer);
-     if (playerIndex === 2) {
-       playerIndex = -1;
+    currentPlayer.toggleTurn();
+    let playerIndex = this.players.indexOf(currentPlayer);
+    if (playerIndex === 2) {
+      playerIndex = -1;
     }
-     let nextPlayer = this.players[playerIndex + 1];
-     nextPlayer.toggleTurn();
+    let nextPlayer = this.players[playerIndex + 1];
+    nextPlayer.toggleTurn();
   }
 }
 

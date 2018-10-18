@@ -6,7 +6,7 @@ const data = require('../js/data.js');
 
 beforeEach(function() {
   var player1 = new Player('Paul');
-  var question = new Question(data.clues[0])
+  var question = new Question(data.clues[0]);
 });
 
   describe('Player', function() {
@@ -17,13 +17,13 @@ beforeEach(function() {
 
     it('should increase player score if correct', function() {
       player1.submitAnswer('golf', question);
-      expect(player1.score).to.equal(100)
-      expect(playerAnswer.value).to.equal('')
+      expect(player1.score).to.equal(100);
+      expect(playerAnswer.value).to.equal('');
     })
 
     it('should decrease player score if incorrect', function() {
       player1.submitAnswer('basketball', question);
-      expect(player1.score).to.equal(-100)
-      expect(playerAnswer.value).to.equal('')
+      expect(player1.score).to.equal(-100);
+      expect(playerAnswer.value).to.equal('');
   })
 })
