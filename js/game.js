@@ -8,6 +8,11 @@ class Game {
     this.roundTwoCategories = [];
     this.roundThreeCategory = [];
     this.round = 1;
+    // this.dataForAll = dataForAll;
+
+    // if (typeof require !== 'undefined') {
+    //   this.data = require('../js/data.js')
+    // }
   }
 
   setCategories() {

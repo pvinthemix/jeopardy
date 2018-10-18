@@ -13,7 +13,7 @@ beforeEach(function() {
     it('should be a function', function() {
       var player1 = new Player('Paul');
       expect(player1).isFunction().to.equal(true);
-    }
+    })
 
     it('should increase player score if correct', function() {
       player1.submitAnswer('golf', question);
