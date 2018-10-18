@@ -22,7 +22,7 @@ function startGame() {
   player3 = new Player(playerThreeInput.value);
   player1.turn = true;
   startScreen.classList.add('hidden');
-  game = new Game([player1, player2, player3])
+  game = new Game([player1, player2, player3]);
   domUpdates = new DomUpdates();
   game.setCategories();
   game.setQuestions();
@@ -42,6 +42,5 @@ function submitAnswerHandler() {
     return player.turn === true;
   })
   let playerIndex = game.players.indexOf(currentPlayer);
-
-  currentPlayer.submitAnswer(playerAnswer.value, currentQuestion, playerIndex)
+  currentPlayer.submitAnswer(playerAnswer.value, currentQuestion, playerIndex);
 }
