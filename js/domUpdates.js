@@ -4,11 +4,11 @@ class DomUpdates {
   }
 
   setPlayerNames() {
-    game.players.forEach((player) => {
+    game.players.forEach((player, i) => {
       let namesAndScore = document.createElement('div');
       namesAndScore.innerHTML = `<div class="name-styling">
         <h2>Player Name: ${player.name}</h2> 
-        <h2>Score: <span class=${player.id}>0</span></h2></div>`;
+        <h2>Score: <span id="${i}" class='player-score'>0</span></h2></div>`;
       const playerDisplay = document.querySelector('.bottom-names-container');
       playerDisplay.append(namesAndScore);
     });
@@ -48,7 +48,7 @@ class DomUpdates {
   }
 
   changeScore() {
-
+    
   }
 }
 
