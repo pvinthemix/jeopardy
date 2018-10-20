@@ -12,6 +12,7 @@ var domUpdates;
 var player1;
 var player2;
 var player3;
+// var question;
 
 startButton.addEventListener('click', startGame)
 submitAnswer.addEventListener('click', submitAnswerHandler)
@@ -25,12 +26,11 @@ function startGame() {
   game = new Game([player1, player2, player3]);
   domUpdates = new DomUpdates();
   game.setCategories();
-  game.setQuestions();
+  game.setCluesForRounds();
   domUpdates.addGameBoardListener();
   domUpdates.setPlayerNames();
-  Array.from(categoryTitles).forEach((title, i) => {
-    title.innerText = game.roundOneCategories[i];
-  })
+  domUpdates.displayQuestions();
+  console.log(game);
 }
 
 function submitAnswerHandler() {

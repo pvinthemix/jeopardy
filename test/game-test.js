@@ -11,16 +11,9 @@ describe('Game', function() {
     game = new Game();
   });
 
-  it('should return true', function() {
-
-    expect(true).to.equal(true);
-  });
-
   it('should set an array of categories', function() {
     game.setCategories();
-    expect(game.roundOneCategories.length).to.equal(4);
-    expect(game.roundTwoCategories.length).to.equal(4);
-    expect(game.roundThreeCategory.length).to.equal(1);
+    expect(game.roundCategories.length).to.equal(4);
   })
 
   it('should separate round questions into arrays on game object', function() {

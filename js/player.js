@@ -8,13 +8,13 @@ class Player {
   submitAnswer(playerAnswer, question, i) {
     if (playerAnswer.value === question.answer) {
       this.score += question.pointValue;
-      domUpdates.renderScore(this.score); 
+      domUpdates.renderScore(this.name, this.score); 
       // document.getElementById(i).innerText = this.score;
       playerAnswer.value = '';
       game.changePlayer();
     } else {
       this.score -= question.pointValue;
-      domUpdates.renderScore(this.score); 
+      domUpdates.renderScore(this.name, this.score); 
       // document.getElementById(i).innerText = this.score;
       playerAnswer.value = '';
       game.changePlayer();

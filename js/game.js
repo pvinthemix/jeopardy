@@ -1,63 +1,31 @@
 class Game {
   constructor(players) {
     this.players = players;
-    this.currentQuestion = null;
+    this.roundClues = [];
     this.currentAnswer = null;
     this.currentQuestionPointValue = null;
-    this.roundOneCategories = [];
-    this.roundTwoCategories = [];
-    this.roundThreeCategory = [];
+    this.roundCategories = [];
     this.round = 1;
   }
 
   setCategories() {
-    const categories = Object.keys(data.categories);
+    const categories = Object.entries(data.categories);
 
-    while (this.roundOneCategories.length < 4) {
+
+    while (this.roundCategories.length < 4) {
       const index = Math.floor(Math.random() * ((categories.length - 1) - 0));
-      this.roundOneCategories.push(categories.splice(index, 1)[0]);
+      this.roundCategories.push({name: categories[index][0], categoryId: categories[index][1]});
+      categories.splice(index, 1);
     }
-    while (this.roundTwoCategories.length < 4) {
-      const index = Math.floor(Math.random() * ((categories.length - 1) - 0));
-      this.roundTwoCategories.push(categories.splice(index, 1)[0]);
-    }
-    this.roundThreeCategory.push(categories[0]);
   }
 
-  setQuestions() {
-    let categoryIdArray;
-
-    if (this.round === 1) { 
-      categoryIdArray = this.roundOneCategories.map((category) => {
-        return data.categories[category];
-      });
-    } else if (this.round === 2) {
-      categoryIdArray = this.roundTwoCategories.map((category) => {
-        return data.categories[category];
-      });
-    } else {
-      categoryIdArray = this.roundThreeCategory.map((category) => {
-        return data.categories[category];
-      });
-    }
-    
-    this.roundQuestions100 = this.roundQuestions(100, categoryIdArray);
-    this.roundQuestions200 = this.roundQuestions(200, categoryIdArray);
-    this.roundQuestions300 = this.roundQuestions(300, categoryIdArray);
-    this.roundQuestions400 = this.roundQuestions(400, categoryIdArray);
-    this.roundQuestions500 = this.roundQuestions(500, categoryIdArray);
-  }
-  
-  roundQuestions(questionValue, categoryIdArray) {
-    return categoryIdArray.map((id) => {    
-      const questions = data.clues.filter((clue) => {
-        return clue.categoryId === id;
-      }).filter((question) => {
-        return question.pointValue === questionValue || question.value === questionValue;
+  setCluesForRounds() {
+    this.roundCategories.forEach((category) => {
+      const categoryClues = data.clues.filter((clue) => {
+        return clue.categoryId === category.categoryId;
       })
-      const index = Math.floor(Math.random() * ( (questions.length - 1) - 0));
-      return questions[index];
-    })
+      this.roundClues.push(categoryClues);
+    });
   }
 
   changePlayer() {

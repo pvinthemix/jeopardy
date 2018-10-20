@@ -1,4 +1,4 @@
-ertwyconst data = {
+const data = {
   response_code: {
     version: '1.5',
     termsofService: 'http://frontend.turing.io/projects/jeopardy.html',
