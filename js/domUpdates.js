@@ -44,6 +44,10 @@ class DomUpdates {
     let gameTable = document.querySelector('.game-question-table');
     gameTable.addEventListener('click', playerQuestionSelection);
   }
+
+  renderScore(score) {
+    document.getElementById(i).innerText = score;
+  }
 }
 
 

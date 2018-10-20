@@ -42,5 +42,5 @@ function submitAnswerHandler() {
     return player.turn === true;
   })
   let playerIndex = game.players.indexOf(currentPlayer);
-  currentPlayer.submitAnswer(playerAnswer.value, currentQuestion, playerIndex);
+  currentPlayer.submitAnswer(playerAnswer, currentQuestion, playerIndex);
 }

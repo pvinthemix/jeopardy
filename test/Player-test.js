@@ -1,17 +1,24 @@
 const chai = require('chai');
 const expect = chai.expect;
+const spies = require('chai-spies');
+chai.use(spies);
+global.domUpdates = require('../js/domUpdates.js');
 const Player = require('../js/player.js');
 const Question = require('../js/Question.js');
 const data = require('../js/data.js');
 
-beforeEach(function() {
-  var player1 = new Player('Paul');
-  var question = new Question(data.clues[0]);
-});
-
+chai.spy.on(global.domUpdates, 'renderScore', () => {});
+//add every domUpdates method in this fashion   Use an array with the methods inside //
   describe('Player', function() {
+    var player1;
+    var question;
+
+    beforeEach(function() {
+      player1 = new Player('Paul');
+      question = new Question(data.clues[0]);
+    });
+
     it('should be a function', function() {
-      var player1 = new Player('Paul');
       expect(player1).isFunction().to.equal(true);
     })
 

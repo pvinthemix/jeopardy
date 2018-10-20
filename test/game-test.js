@@ -1,6 +1,8 @@
 const chai = require('chai');
 const expect = chai.expect;
+global.data = require('../js/data.js');
 const Game = require('../js/game.js');
+
 
 describe('Game', function() {
   var game;
