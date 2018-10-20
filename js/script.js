@@ -12,7 +12,6 @@ var domUpdates;
 var player1;
 var player2;
 var player3;
-// var question;
 
 startButton.addEventListener('click', startGame)
 submitAnswer.addEventListener('click', submitAnswerHandler)
