@@ -27,22 +27,27 @@ class DomUpdates {
       switch (event.target.classList[0]) {
       case 'question100':
         questionBeingAsked = game.roundClues[categoryIndex][0];
+        event.target.classList.add('hidden');
         console.log(game.roundClues[categoryIndex][0])
         break;
       case 'question200':
         questionBeingAsked = game.roundClues[categoryIndex][1];
+        event.target.classList.add('hidden');
         console.log(game.roundClues[categoryIndex][1])
         break;
       case 'question300':
         questionBeingAsked = game.roundClues[categoryIndex][2];
+        event.target.classList.add('hidden');
         console.log(game.roundClues[categoryIndex][2])
         break;
       case 'question400':
         questionBeingAsked = game.roundClues[categoryIndex][3];
+        event.target.classList.add('hidden');
         console.log(game.roundClues[categoryIndex][3])
         break;
       case 'question500':
         questionBeingAsked = game.roundClues[categoryIndex][4];
+        event.target.classList.add('hidden');
         console.log(game.roundClues[categoryIndex][4])
         break;
       }

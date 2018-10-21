@@ -4,11 +4,16 @@
   padding: 0;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 main {
   background-color: lightblue;
   display: grid;
   grid-template-rows: 100px 1fr 100px;
   height: 100vh
+  
 }
 
 .start-screen {
@@ -34,7 +39,7 @@ main {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 .name-input,
@@ -114,6 +119,10 @@ main {
   height: 100%;
   text-align: center;
   width: 100%;
+}
+
+.category {
+  font-weight: bold;
 }
 
 tr, 

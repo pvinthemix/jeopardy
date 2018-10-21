@@ -10,8 +10,6 @@ class Game {
 
   setCategories() {
     const categories = Object.entries(data.categories);
-
-
     while (this.roundCategories.length < 4) {
       const index = Math.floor(Math.random() * ((categories.length - 1) - 0));
       this.roundCategories.push({name: categories[index][0], categoryId: categories[index][1]});
