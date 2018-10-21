@@ -1,6 +1,7 @@
 class DailyDouble extends Question {
-  constructor() {
-    super(); 
+  constructor(roundClues) {
+    super(roundClues);
+      this.dailyDouble = true; 
 
   }
 }
