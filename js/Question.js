@@ -3,7 +3,7 @@ class Question {
     this.question = clueObj.question;
     this.pointValue = clueObj.pointValue;
     this.answer = clueObj.answer;
-    this.categoryID = clueObj.categoryID;
+    this.categoryID = clueObj.categoryId;
   }
 }
 
