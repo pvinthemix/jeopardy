@@ -42,4 +42,5 @@ function submitAnswerHandler() {
   })
   let playerIndex = game.players.indexOf(currentPlayer);
   currentPlayer.submitAnswer(playerAnswer, currentQuestion, playerIndex);
+  
 }
