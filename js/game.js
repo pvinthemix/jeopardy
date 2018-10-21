@@ -18,11 +18,15 @@ class Game {
   }
 
   setCluesForRounds() {
+    // let random = Math.floor((Math.random() * 20) - 1);
     this.roundCategories.forEach((category) => {
       const categoryClues = data.clues.filter((clue) => {
         return clue.categoryId === category.categoryId;
       })
       this.roundClues.push(categoryClues);
+    // var dailyDouble = new DailyDouble(categoryClues[random]);
+    // console.log(dailyDouble);
+
     });
   }
 
